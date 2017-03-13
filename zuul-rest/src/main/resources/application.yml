@@ -1,0 +1,20 @@
+# Spring properties
+spring:
+  application:
+     name: zuul-rest
+
+# HTTP Server
+server:
+  port: 5555
+  compression:
+    enabled: true
+zuul:
+  ignored-services: "*"
+  routes:
+      orderapi:
+          path: /orderapi/**
+          serviceId: order-service
+          stripPrefix: true
+
+
+

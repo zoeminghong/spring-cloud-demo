@@ -1,0 +1,12 @@
+spring:
+  cloud:
+#  config的相关配置
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:7001/
+      name: appzone
+#      discovery:
+#        enabled: true
+#        service-id: config-server
+#      fail-fast: true
