@@ -6,7 +6,30 @@ spring:
       profile: dev
       uri: http://localhost:7001/
       name: appzone
-#      discovery:
-#        enabled: true
-#        service-id: config-server
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVICE
+      username: root
+      password: 123456
 #      fail-fast: true
+# Spring properties
+  application:
+     name: order-service  # Service registers under this name
+  freemarker:
+    enabled: false           # Ignore Eureka dashboard FreeMarker templates
+  thymeleaf:
+    cache: false
+
+# Discovery Server Access
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://root:123456@${eureka.instance.hostname}:8761/eureka/
+
+# HTTP Server
+server:
+  port: 2222   # HTTP (Tomcat) port

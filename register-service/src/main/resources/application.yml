@@ -2,27 +2,29 @@
 server:
   port: ${vcap.application.port:8761}   # HTTP port
 
-#eureka:
-#  instance:
-#    hostname: localhost
-#  client:
-#    registerWithEureka: false
-#    fetchRegistry: false
-#  server:
-#    waitTimeInMsWhenSyncEmpty: 0
 eureka:
     instance:
           hostname: localhost
+          prefer-ip-address: true
+          leaseRenewalIntervalInSeconds: 10 #注册服务的时间
     client:
         registerWithEureka: false
         fetchRegistry: false
         serviceUrl:
-          defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:http://user:password@localhost:8761}/eureka/
+          defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     server:
         waitTimeInMsWhenSyncEmpty: 0
-        enableSelfPreservation: false
+        enableSelfPreservation: false #关闭自我保护
+#        eviction-interval-timer-in-ms: 1000 # 清理间隔（单位毫秒，默认是60*1000）
 
-# Discovery Server Dashboard uses FreeMarker.  Don't want Thymeleaf templates
 spring:
   thymeleaf:
-    enabled: false     # Disable Thymeleaf
+    enabled: false
+  application:
+    name: register-service
+security:
+  user:
+    name: root
+    password: 123456
+logging:
+  file: logs/${spring.application.name}.log
