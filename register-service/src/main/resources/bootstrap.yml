@@ -1,4 +1,9 @@
 # Yureka Server Configuration
+spring:
+  thymeleaf:
+    enabled: false
+  application:
+    name: register-service
 server:
   port: ${vcap.application.port:8761}   # HTTP port
 
@@ -17,11 +22,6 @@ eureka:
         enableSelfPreservation: false #关闭自我保护
 #        eviction-interval-timer-in-ms: 1000 # 清理间隔（单位毫秒，默认是60*1000）
 
-spring:
-  thymeleaf:
-    enabled: false
-  application:
-    name: register-service
 security:
   user:
     name: root

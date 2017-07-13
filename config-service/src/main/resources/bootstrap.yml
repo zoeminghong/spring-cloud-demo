@@ -8,8 +8,10 @@ spring:
         git:
           uri: https://github.com/zoeminghong/spring-cloud-demo.git
           search-paths: config-repo
-          username: username
-          password: password
+#          username: username
+#          password: password
+          username: 617405347@qq.com
+          password: jiaxing@82183513
           basedir: /Users/gjason/project/springcloud/configTemp
       name: appzone #application name
       label: master #分支
@@ -30,7 +32,10 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://root:123456@${eureka.instance.hostname}:8761/eureka/
-
+security:
+  user:
+    name: config
+    password: config123
 # HTTP Server
 server:
   port: 7001   # HTTP (Tomcat) port
