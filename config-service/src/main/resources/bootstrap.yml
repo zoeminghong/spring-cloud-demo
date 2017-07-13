@@ -11,7 +11,7 @@ spring:
 #          username: username
 #          password: password
           username: 617405347@qq.com
-          password: jiaxing@82183513
+          password: ******
           basedir: /Users/gjason/project/springcloud/configTemp
       name: appzone #application name
       label: master #分支
