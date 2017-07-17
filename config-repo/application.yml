@@ -5,3 +5,12 @@ mybatis:
 #  typeAliasesPackage: com.zhz.entity #bean路径
   configuration:
       mapUnderscoreToCamelCase: true  #mybatis支持驼峰
+logging:
+    level:
+        ROOT: WARN
+        org.springframework.web: WARN
+endpoints:
+    restart:
+        enabled: true
+    shutdown:
+        enabled: true

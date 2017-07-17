@@ -11,12 +11,12 @@ spring:
 #          username: username
 #          password: password
           username: 617405347@qq.com
-          password: ******
+          password: *****
           basedir: /Users/gjason/project/springcloud/configTemp
       name: appzone #application name
       label: master #分支
-#  profiles:
-#    active: native #链接本地配置
+  profiles:
+    active: default #链接本地配置，默认就是native
 
 
 # Map the error path to error template (for Thymeleaf)
@@ -36,6 +36,8 @@ security:
   user:
     name: config
     password: config123
+encrypt:
+  key: sdk$30o#@#$$SSS
 # HTTP Server
 server:
   port: 7001   # HTTP (Tomcat) port

@@ -5,7 +5,7 @@ spring:
       label: master
       profile: dev
       uri: http://localhost:7001/
-      name: order
+      name: user
       discovery:
         enabled: true
         service-id: CONFIG-SERVICE
@@ -14,11 +14,7 @@ spring:
 #      fail-fast: true
 # Spring properties
   application:
-     name: order  # Service registers under this name
-  freemarker:
-    enabled: false           # Ignore Eureka dashboard FreeMarker templates
-  thymeleaf:
-    cache: false
+    name: user  # Service registers under this name
 # Discovery Server Access
 eureka:
   instance:
@@ -31,5 +27,4 @@ eureka:
 
 # HTTP Server
 server:
-  port: 2222 # HTTP (Tomcat) port
-
+  port: 5555 # HTTP (Tomcat) port
