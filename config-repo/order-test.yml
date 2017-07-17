@@ -2,5 +2,10 @@ spring:
   datasource:
     url: jdbc:mysql://172.30.251.185:3306/crm_dev
     username: crm_root
-    password: 123456
+    password: '{cipher}1ce362d7b88c00a35a01043d5e214c30339d08fd1f8c6f57b21328c75e45afcc'
     driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 172.30.251.183
+    port: 16379
+    database: 10
+    password: '{cipher}5a0e3db4bb7033cb30d3723b18621f414f1c07d3a039de2e5ea13b13a0ebc8de'

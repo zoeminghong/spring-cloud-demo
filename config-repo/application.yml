@@ -1,2 +1,7 @@
 logging:
   path: ../../logs
+mybatis:
+#  mapperLocations: classpath:mapper/*.xml #mapper扫描路径
+#  typeAliasesPackage: com.zhz.entity #bean路径
+  configuration:
+      mapUnderscoreToCamelCase: true  #mybatis支持驼峰
