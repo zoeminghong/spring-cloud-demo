@@ -1,5 +1,3 @@
-logging:
-  path: ../../logs
 mybatis:
 #  mapperLocations: classpath:mapper/*.xml #mapper扫描路径
 #  typeAliasesPackage: com.zhz.entity #bean路径
@@ -9,6 +7,7 @@ logging:
     level:
         ROOT: WARN
         org.springframework.web: WARN
+    path: ../../logs
 endpoints:
     restart:
         enabled: true
