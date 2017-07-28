@@ -8,12 +8,16 @@ spring:
         git:
           uri: https://github.com/zoeminghong/spring-cloud-demo.git
           search-paths: config-repo
+          repos:
+            crm:
+              pattern: order*
+              uri: https://github.com/zoeminghong/spring-cloud-demo.git
 #          username: username
 #          password: password
           username: 617405347@qq.com
-          password: *****
+          password: jiaxing@82183513
           basedir: /Users/gjason/project/springcloud/configTemp
-      name: appzone #application name
+#      name: appzone #application name
       label: master #分支
   profiles:
     active: default #链接本地配置，默认就是native
